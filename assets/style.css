@@ -29,7 +29,7 @@ body {
 h1 {
     color: var(--foreground-color);
     font-size: 2em;
-    margin: 0 0 1em 0;
+    margin: 0 0 20px 0;
     line-height: 1;
 }
 
@@ -62,4 +62,40 @@ hr {
     line-height: 160%;
     font-size: 1em;
     color: var(--foreground-color);
+}
+
+.site-title {
+    font-size: 3em;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.site-about {
+    font-size: 1.2em;
+    line-height: 160%;
+    margin-bottom: 20px;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.item-date {
+    min-width: 160px;
+    font-size: 0.75em;
+    color: var(--foreground-secondary-color);
+}
+
+.item-title {
+    flex: 1;
+    font-size: 1em;
+    line-height: 1;
 }

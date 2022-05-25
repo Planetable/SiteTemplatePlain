@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block dom_ready %}
+{% endblock %}
+{% block main %}
+<div class="site-title">{{ page_title }}</div>
+<div class="site-about">{{ page_description }}</div>
+<div class="items">
+{% for article in articles %}
+<div class="item">
+<div class="item-date">{{ article.created }}</div>
+<div class="item-title"><a href="./{{ article.link }}">{{ article.title }}</a></div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
