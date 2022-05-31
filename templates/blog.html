@@ -1,15 +1,7 @@
 {% extends 'base.html' %}
-{% block dom_ready %}
-const fmt = new Intl.DateTimeFormat(undefined, {
-  dateStyle: "long",
-  timeStyle: "medium",
-});
-const date = new Date("{{ created_date }}");
-document.querySelector(".date").innerText = fmt.format(date);
-{% endblock %}
 {% block main %}
 <h1>{{ article.title }}</h1>
-<div class="date"></div>
+<div class="date">{{ article.created|formatDate }}</div>
 <div class="content">
   {{ content_html }}
 </div>
