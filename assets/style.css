@@ -92,6 +92,8 @@ hr {
     min-width: 160px;
     font-size: 0.75em;
     color: var(--foreground-secondary-color);
+    text-align: right;
+    margin-right: 1em;
 }
 
 .item-title {
