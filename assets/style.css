@@ -34,7 +34,7 @@ h1 {
 }
 
 img {
-    width: 90%;
+    max-width: 100%;
 }
 
 hr {
