@@ -8,12 +8,7 @@
     <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="{{ assets_prefix }}assets/style.css?r={{ build_timestamp }}">
     <title>{% block title %}{{ page_title }}{% endblock %}</title>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        {% block dom_ready %}
-        {% endblock %}
-      });
-    </script>
+    {% block head %}{% endblock %}
   </head>
   <body>
     <div class="wrapper">
