@@ -1,6 +1,7 @@
 :root {
     --background-color: #fff;
     --foreground-color: #000;
+    --link-color: #336bad;
     --foreground-secondary-color: #666;
     --border-color: #e2e2e2;
 }
@@ -9,6 +10,7 @@
     :root {
         --background-color: #1c1c1e;
         --foreground-color: #fff;
+        --link-color: #6699ff;
         --foreground-secondary-color: #adadaf;
         --border-color: #2b2b2d;
     }
@@ -24,6 +26,20 @@ body {
     padding: 0;
     margin: 0;
     font-family: helvetica neue,arial,hiragino sans gb,microsoft yahei,sans-serif;
+}
+
+a:link, a:visited, a:active {
+    color: var(--link-color);
+    text-decoration: none;
+    line-break: anywhere;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+code {
+    line-break: anywhere;
 }
 
 h1 {
