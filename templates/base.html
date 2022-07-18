@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="{{ assets_prefix }}assets/style.css?r={{ build_timestamp }}">
     <title>{% block title %}{{ page_title }}{% endblock %}</title>
     {% block head %}{% endblock %}
+    {% if planet.plausibleEnabled %}
+    <script defer data-domain="{{ planet.plausibleDomain }}" src="https://plausible.io/js/plausible.local.js"></script>
+    {% endif %}
   </head>
   <body>
     <div class="wrapper">
