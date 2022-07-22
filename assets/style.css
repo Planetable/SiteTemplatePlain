@@ -25,7 +25,7 @@ body {
     background-color: var(--background-color);
     padding: 0;
     margin: 0;
-    font-family: helvetica neue,arial,hiragino sans gb,microsoft yahei,sans-serif;
+    font-family: "Helvetica Neue", "Arial", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
 
 a:link, a:visited, a:active {
@@ -67,14 +67,33 @@ hr {
     color: var(--foreground-secondary-color);
 }
 
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(to bottom, var(--background-color) 0%, var(--background-color) 80%, transparent 100%);
+}
+
+.breadcrumb > .chevron {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.breadcrumb > a {
+    line-break: auto;
+}
+
 .main {
     max-width: 800px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     padding: 20px;
 }
 
 .content {
-    margin: 20px 0 20px 0;
+    margin: 20px 0;
     line-height: 160%;
     font-size: 1em;
     color: var(--foreground-color);

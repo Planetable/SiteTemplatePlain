@@ -1,4 +1,16 @@
 {% extends 'base.html' %}
+{% block head %}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!window.PLANET.visitedFromPlanetClient) {
+      breadcrumb([
+        { text: "{{ planet.name }}", url: "../" },
+        { text: "{{ article.title }}", url: "./ " },
+      ]);
+    }
+  });
+</script>
+{% endblock %}
 {% block main %}
 <h1>{{ article.title }}</h1>
 <div class="date">{{ article.created|formatDate }}</div>
