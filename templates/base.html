@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ assets_prefix }}assets/style.css?r={{ build_timestamp }}">
     <title>{% block title %}{{ page_title }}{% endblock %}</title>
     <script>
-      let userAgentRegex = /Planet\/\S*/
+      let userAgentRegex = /Planet\/\S*/;
       window.PLANET = {
         visitedFromPlanetClient: !!navigator.userAgent.match(userAgentRegex),
         assetsPrefix: '{{ assets_prefix }}',

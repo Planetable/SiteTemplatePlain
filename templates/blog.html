@@ -3,9 +3,10 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     if (!window.PLANET.visitedFromPlanetClient) {
+      document.querySelector('.audio-container').style.display = 'block';
       breadcrumb([
-        { text: "{{ planet.name }}", url: "../" },
-        { text: "{{ article.title }}", url: "./ " },
+        { text: '{{ planet.name }}', url: '../' },
+        { text: '{{ article.title }}', url: './' },
       ]);
     }
   });
@@ -17,9 +18,16 @@
 <div class="content">
   {% if article.hasVideo %}
   <div class="video-container">
-  <video class="video" controls playsinline>
-    <source src="{{ article.videoFilename }}" type="video/mp4">
-  </video>
+    <video class="video" controls playsinline>
+      <source src="{{ article.videoFilename }}">
+    </video>
+  </div>
+  {% endif %}
+  {% if article.hasAudio %}
+  <div class="audio-container" style="display: none;">
+    <audio class="audio" controls>
+      <source src="{{ article.audioFilename }}">
+    </audio>
   </div>
   {% endif %}
   {{ content_html }}
