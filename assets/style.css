@@ -4,6 +4,7 @@
     --link-color: #336bad;
     --foreground-secondary-color: #666;
     --border-color: #e2e2e2;
+    --chevron-color: #333;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +14,7 @@
         --link-color: #6699ff;
         --foreground-secondary-color: #adadaf;
         --border-color: #2b2b2d;
+        --chevron-color: #eee;
     }
 }
 
@@ -80,6 +82,9 @@ hr {
 .breadcrumb > .chevron {
     display: inline-block;
     margin: 0 8px;
+    color: var(--chevron-color);
+    font-family: "Lucida Grande";
+    font-weight: 500;
 }
 
 .breadcrumb > a {
