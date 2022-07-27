@@ -53,6 +53,7 @@ h1 {
 
 img {
     max-width: 100%;
+    max-height: 75vh;
 }
 
 hr {
@@ -76,6 +77,7 @@ hr {
     padding: 20px 0;
     position: fixed;
     top: 0;
+    z-index: 99;
     background: linear-gradient(to bottom, var(--background-color) 0%, var(--background-color) 80%, transparent 100%);
 }
 
@@ -148,6 +150,7 @@ hr {
     height: 0px;
     position: relative;
     border-radius: 2px;
+    margin-bottom: 20px;
 }
 
 .video {
@@ -157,4 +160,12 @@ hr {
     top: 0;
     left: 0;
     border-radius: 2px;
+}
+
+.audio-container {
+    margin-bottom: 20px;
+}
+
+.audio {
+    width: 100%;
 }

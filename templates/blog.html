@@ -3,7 +3,9 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     if (!window.PLANET.visitedFromPlanetClient) {
-      document.querySelector('.audio-container').style.display = 'block';
+      if(document.getElementById('audio-container')){
+        document.querySelector('.audio-container').style.display = 'block';
+      }
       breadcrumb([
         { text: '{{ planet.name }}', url: '../' },
         { text: '{{ article.title }}', url: './' },
@@ -24,7 +26,7 @@
   </div>
   {% endif %}
   {% if article.hasAudio %}
-  <div class="audio-container" style="display: none;">
+  <div class="audio-container" id="audio-container" style="display: none;">
     <audio class="audio" controls>
       <source src="{{ article.audioFilename }}">
     </audio>
