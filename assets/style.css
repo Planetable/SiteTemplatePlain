@@ -97,6 +97,7 @@ hr {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    color: var(--foreground-color);
 }
 
 .content {
@@ -111,12 +112,14 @@ hr {
     line-height: 1;
     font-weight: 800;
     margin-bottom: 20px;
+    color: var(--foreground-color);
 }
 
 .site-about {
     font-size: 1.2em;
     line-height: 160%;
     margin-bottom: 20px;
+    color: var(--foreground-color);
 }
 
 .items {
