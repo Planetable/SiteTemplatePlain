@@ -15,7 +15,7 @@
 </script>
 {% endblock %}
 {% block main %}
-<h1>{{ article.title|escapeHTML }}</h1>
+<h1>{{ article.title|escape }}</h1>
 <div class="date">{{ article.created|formatDate }}</div>
 <div class="content">
   {% if article.hasVideo %}
