@@ -7,8 +7,8 @@
         document.querySelector('.audio-container').style.display = 'block';
       }
       breadcrumb([
-        { text: {{ planet.name|escapeString }}, url: '../' },
-        { text: {{ article.title|escapeString }}, url: './' },
+        { text: "{{ planet.name|escapejs }}", url: '../' },
+        { text: "{{ article.title|escapejs }}", url: './' },
       ]);
     }
   });
