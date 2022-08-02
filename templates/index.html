@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block main %}
-<div class="site-title">{{ page_title }}</div>
-<div class="site-about">{{ page_description }}</div>
+<div class="site-title">{{ page_title|escape }}</div>
+<div class="site-about">{{ page_description|escape }}</div>
 <div class="items">
   {% for article in articles %}
   <div class="item">
     <div class="item-date">{{ article.created|formatDate }}</div>
-    <div class="item-title"><a href=".{{ article.link }}">{{ article.title }}</a></div>
+    <div class="item-title"><a href=".{{ article.link }}">{{ article.title|escape }}</a></div>
   </div>
   {% endfor %}
 </div>

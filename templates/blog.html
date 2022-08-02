@@ -7,15 +7,15 @@
         document.querySelector('.audio-container').style.display = 'block';
       }
       breadcrumb([
-        { text: '{{ planet.name }}', url: '../' },
-        { text: '{{ article.title }}', url: './' },
+        { text: "{{ planet.name|escapejs }}", url: '../' },
+        { text: "{{ article.title|escapejs }}", url: './' },
       ]);
     }
   });
 </script>
 {% endblock %}
 {% block main %}
-<h1>{{ article.title }}</h1>
+<h1>{{ article.title|escape }}</h1>
 <div class="date">{{ article.created|formatDate }}</div>
 <div class="content">
   {% if article.hasVideo %}
