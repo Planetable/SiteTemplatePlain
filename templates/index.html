@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
 {% block main %}
-<div class="site-title">{{ page_title|escape }}</div>
-<div class="site-about">{{ page_description|escape }}</div>
+<div class="top">
+  {% if has_avatar %}
+  <img src="{{ assets_prefix }}avatar.png" width="72" height="72" class="avatar">
+  {% endif %}
+  <div class="site-info">
+    <div class="site-title">{{ page_title|escape }}</div>
+    <div class="site-about">{{ page_description|escape }}</div>
+  </div>
+</div>
 <div class="items">
   {% for article in articles %}
   <div class="item">
-    <div class="item-date">{{ article.created|formatDate }}</div>
     <div class="item-title"><a href=".{{ article.link }}">{{ article.title|escape }}</a></div>
+    <div class="item-date">{{ article.created|formatDate }}</div>
   </div>
   {% endfor %}
 </div>
