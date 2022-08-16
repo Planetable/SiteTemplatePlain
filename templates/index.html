@@ -6,14 +6,26 @@
   {% endif %}
   <div class="site-info">
     <div class="site-title">{{ page_title|escape }}</div>
-    <div class="site-about">{{ page_description|escape }}</div>
+    {% if page_description.count > 0 %}<div class="site-about">{{ page_description|escape }}</div>{% endif %}
   </div>
 </div>
+<div class="nav-container"><div class="nav">
+  <a href="./" class="nav-current">Home</a>
+  <!-- TODO: Implement Article.kind and Archive
+  <a href="./" class="nav-item">About</a>
+  <a href="./" class="nav-item">Archive</a>
+  <a href="./" class="nav-item">Contact</a>
+  -->
+</div></div>
 <div class="items">
   {% for article in articles %}
   <div class="item">
     <div class="item-title"><a href=".{{ article.link }}">{{ article.title|escape }}</a></div>
-    <div class="item-date">{{ article.created|formatDate }}</div>
+    <div class="item-info">
+      <div class="item-date">{{ article.created|ymd }}</div>
+      {% if article.hasVideo %}<img src="{{ assets_prefix }}assets/video.svg" width="1em" class="item-video-icon" alt="Video">{% endif %}
+      {% if article.hasAudio %}<img src="{{ assets_prefix }}assets/microphone.svg" width="1em" class="item-audio-icon" alt="Video">{% endif %}
+    </div>
   </div>
   {% endfor %}
 </div>
