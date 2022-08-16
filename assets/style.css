@@ -6,6 +6,11 @@
     --icon-secondary-filter: invert(43%) sepia(22%) saturate(10%) hue-rotate(58deg) brightness(87%) contrast(93%);;
     --border-color: #e2e2e2;
     --chevron-color: #333;
+    --site-title-font-size: 2.5em;
+    --h1-font-size: 2em;
+    --item-gap: 30px;
+    --inner-gap: 20px;
+    --title-line-height: 1.2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +22,15 @@
         --icon-secondary-filter: invert(87%) sepia(6%) saturate(58%) hue-rotate(202deg) brightness(80%) contrast(87%);
         --border-color: #2b2b2d;
         --chevron-color: #eee;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --item-gap: 15px;
+        --inner-gap: 10px;
+        --site-title-font-size: 2em;
+        --h1-font-size: 1.75em;
     }
 }
 
@@ -49,9 +63,9 @@ code {
 
 h1 {
     color: var(--foreground-color);
-    font-size: 2em;
+    font-size: var(--h1-font-size);
     margin: 0 0 20px 0;
-    line-height: 1;
+    line-height: var(--title-line-height);
 }
 
 img {
@@ -96,7 +110,7 @@ hr {
 }
 
 .main {
-    max-width: 800px;
+    max-width: calc(800px - env(safe-area-inset-left) - env(safe-area-inset-left));
     margin: 0 auto;
     padding: 20px;
     color: var(--foreground-color);
@@ -109,16 +123,26 @@ hr {
     color: var(--foreground-color);
 }
 
+.site-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--inner-gap);
+    font-size: 1em;
+    line-height: var(--title-line-height);
+    color: var(--foreground-color);
+}
+
 .site-title {
-    font-size: 3em;
-    line-height: 1;
-    font-weight: 800;
+    font-size: var(--site-title-font-size);
+    line-height: var(--title-line-height);
+    font-weight: 600;
     color: var(--foreground-color);
 }
 
 .site-about {
     font-size: 1.2em;
-    line-height: 160%;
+    line-height: var(--title-line-height);
     color: var(--foreground-color);
 }
 
@@ -132,13 +156,13 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 40px;
+    margin-bottom: var(--item-gap);
 }
 
 .item-title {
     font-size: 1.25em;
     font-weight: 500;
-    line-height: 1;
+    line-height: var(--title-line-height);
     text-align: left;
 }
 
@@ -190,18 +214,8 @@ hr {
 .top {
     align-items: center;
     display: flex;
-    gap: 20px;
+    gap: var(--inner-gap);
     margin-bottom: 40px;
-}
-
-.site-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 1em;
-    line-height: 1.2;
-    color: var(--foreground-color);
 }
 
 img.avatar {
