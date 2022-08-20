@@ -16,6 +16,12 @@
   <a href="./" class="nav-item">Archive</a>
   <a href="./" class="nav-item">Contact</a>
   -->
+  {% if planet.twitterUsername.count > 0 %}
+  <a href="https://twitter.com/{{ planet.twitterUsername|escapejs }}" target="_blank"><img src="{{ assets_prefix }}assets/twitter.svg" alt="twitter.com/{{ planet.twitterUsername|escapejs }}" class="social-icon" width="1em"></a>
+  {% endif %}
+  {% if planet.githubUsername.count > 0 %}
+  <a href="https://github.com/{{ planet.githubUsername|escapejs }}" target="_blank"><img src="{{ assets_prefix }}assets/github.svg" alt="github.com/{{ planet.githubUsername|escapejs }}" class="social-icon" width="1em"></a>
+  {% endif %}
 </div></div>
 <div class="items">
   {% for article in articles %}

@@ -5,7 +5,8 @@
     --foreground-secondary-color: #666;
     --nav-current-background-color: #e2e2e2;
     --nav-current-foreground-color: #fff;
-    --icon-secondary-filter: invert(43%) sepia(22%) saturate(10%) hue-rotate(58deg) brightness(87%) contrast(93%);;
+    --icon-secondary-filter: invert(43%) sepia(22%) saturate(10%) hue-rotate(58deg) brightness(87%) contrast(93%);
+    --icon-social-filter: invert(28%) sepia(47%) saturate(2131%) hue-rotate(197deg) brightness(95%) contrast(78%);
     --border-color: #e2e2e2;
     --chevron-color: #333;
     --site-title-font-size: 2.5em;
@@ -24,6 +25,7 @@
         --nav-current-background-color: #adadaf;
         --nav-current-foreground-color: #fafaff;
         --icon-secondary-filter: invert(87%) sepia(6%) saturate(58%) hue-rotate(202deg) brightness(80%) contrast(87%);
+        --icon-social-filter: invert(64%) sepia(85%) saturate(4030%) hue-rotate(203deg) brightness(108%) contrast(102%);
         --border-color: #2b2b2d;
         --chevron-color: #eee;
     }
@@ -189,6 +191,13 @@ hr {
     filter: var(--icon-secondary-filter);
 }
 
+.social-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: bottom;
+    filter: var(--icon-social-filter);
+}
+
 .video-container {
     width: 100%;
     padding-top: 56.25%;
@@ -236,10 +245,11 @@ img.avatar {
 
 .nav {
     display: inline-flex;
-    gap: 10px;
+    gap: 16px;
     padding: 2px;
     box-sizing: border-box;
     margin: 0px auto 40px auto;
+    align-items: center;
 }
 
 .nav-current:link, .nav-current:visited {
