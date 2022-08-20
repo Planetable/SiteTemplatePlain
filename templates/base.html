@@ -58,6 +58,9 @@
         main.insertAdjacentElement('afterbegin', container);
       }
     </script>
+    {% if has_avatar %}
+    <link rel="icon" href="{{ assets_prefix }}avatar.png" sizes="144x144">
+    {% endif %}
     {% block head %}{% endblock %}
     {% if planet.plausibleEnabled %}
     <script defer data-domain="{{ planet.plausibleDomain }}" src="https://{{ planet.plausibleAPIServer }}/js/plausible.local.js"></script>
