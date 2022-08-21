@@ -152,6 +152,14 @@ hr {
     color: var(--foreground-color);
 }
 
+.site-about p:first-child {
+    margin-top: 0px;
+}
+
+.site-about p:last-child {
+    margin-bottom: 0px;
+}
+
 .items {
     display: flex;
     flex-direction: column;
