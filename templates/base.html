@@ -65,13 +65,16 @@
     {% if planet.plausibleEnabled %}
     <script defer data-domain="{{ planet.plausibleDomain }}" src="https://{{ planet.plausibleAPIServer }}/js/plausible.local.js"></script>
     {% endif %}
+    {% if custom_code_head.count > 0 %}{{ custom_code_head }}{% endif %}
   </head>
   <body>
+    {% if custom_code_body_start.count > 0 %}{{ custom_code_body_start }}{% endif %}
     <div class="wrapper">
       <div class="main">
       {% block main %}
       {% endblock %}
       </div>
     </div>
+    {% if custom_code_body_end.count > 0 %}{{ custom_code_body_end }}{% endif %}
   </body>
 </html>
