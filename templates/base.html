@@ -19,6 +19,9 @@
       function breadcrumb(stubs) {
         let container = document.createElement('div');
         container.classList.add('breadcrumb')
+        let inner = document.createElement('div');
+        inner.classList.add('breadcrumb-inner');
+        container.appendChild(inner);
         if (!stubs || !stubs.length) {
           return;
         }
@@ -45,17 +48,16 @@
           return elem;
         }
 
-        container.append(getStubElem(stubs[0]));
-        container.append(getSeparatorElem());
+        inner.append(getStubElem(stubs[0]));
+        inner.append(getSeparatorElem());
         for (let i = 1; i < stubs.length; i++)  {
-          container.append(getStubElem(stubs[i]));
+          inner.append(getStubElem(stubs[i]));
           if (i < stubs.length - 1) {
-            container.append(getSeparatorElem());
+            inner.append(getSeparatorElem());
           }
         }
 
         let main = document.querySelector('.main');
-        main.style.marginTop = '50px';
         main.insertAdjacentElement('afterbegin', container);
       }
     </script>
