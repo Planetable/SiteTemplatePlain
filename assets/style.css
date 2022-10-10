@@ -124,7 +124,7 @@ hr {
 }
 
 .content {
-    margin: 20px 0;
+    margin: 40px 0;
     line-height: 1.75rem;
     font-size: 1em;
     color: var(--foreground-color);
@@ -287,7 +287,17 @@ img.avatar {
     text-decoration: none;
 }
 
-p, h1, h2, h3, h4, h5, h6, ul, .date {
+figure {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+figcaption {
+    font-size: 0.8em;
+    color: var(--foreground-secondary-color);
+}
+
+p, h1, h2, h3, h4, h5, h6, .date, ul, ol, pre, hr {
     max-width: var(--content-max-width);
     margin-left: auto;
     margin-right: auto;
