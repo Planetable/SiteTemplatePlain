@@ -66,6 +66,11 @@ h1 {
     line-height: var(--title-line-height);
 }
 
+h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
 .content img {
     display: block;
     max-width: 100%;
@@ -77,8 +82,8 @@ hr {
     height: 2px;
     color: var(--border-color);
     background-color: var(--border-color);
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .date {
