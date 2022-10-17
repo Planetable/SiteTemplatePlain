@@ -14,7 +14,9 @@
     --item-gap: 30px;
     --inner-gap: 20px;
     --title-line-height: 1.2;
-    --content-max-width: 600px;
+    --content-max-width: 700px;
+    --breadcrumb-background-color: rgba(255, 255, 255, 0.8);
+    --breadcrumb-border-color: rgba(255, 255, 255, 0.7);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +31,8 @@
         --icon-social-filter: invert(64%) sepia(85%) saturate(4030%) hue-rotate(203deg) brightness(108%) contrast(102%);
         --border-color: #2b2b2d;
         --chevron-color: #eee;
+        --breadcrumb-background-color: rgba(32, 32, 34, 0.8);
+        --breadcrumb-border-color: rgba(32, 32, 34, 0.7);
     }
 }
 
@@ -74,7 +78,7 @@ h2 {
 .content img {
     display: block;
     max-width: 100%;
-    margin: 0px auto 0px auto;
+    margin: 40px auto 40px auto;
 }
 
 hr {
@@ -99,7 +103,10 @@ hr {
     position: sticky;
     top: 0;
     z-index: 99;
-    background: linear-gradient(to bottom, var(--background-color) 0%, var(--background-color) 92%, transparent 100%);
+    background-color: var(--breadcrumb-background-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--breadcrumb-border-color);
 }
 
 .breadcrumb-inner {
@@ -322,15 +329,6 @@ p, h1, h2, h3, h4, h5, h6, .date, ul, ol, pre, hr {
         --inner-gap: 10px;
         --site-title-font-size: 2em;
         --h1-font-size: 1.75em;
-    }
-
-    .content img {
-        max-width: calc(100% + 40px);
-        margin: 0px -20px;
-    }
-
-    .avatar {
-        margin: 0px;
     }
 
     .breadcrumb {
