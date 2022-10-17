@@ -16,6 +16,7 @@
   <a href="./" class="nav-item">Archive</a>
   <a href="./" class="nav-item">Contact</a>
   -->
+  <a href="{{ assets_prefix }}rss.xml" target="_blank"><img src="{{ assets_prefix }}assets/rss.svg" alt="RSS" class="social-icon" width="1em"></a>
   {% if planet.twitterUsername.count > 0 %}
   <a href="https://twitter.com/{{ planet.twitterUsername|escapejs }}" target="_blank"><img src="{{ assets_prefix }}assets/twitter.svg" alt="twitter.com/{{ planet.twitterUsername|escapejs }}" class="social-icon" width="1em"></a>
   {% endif %}

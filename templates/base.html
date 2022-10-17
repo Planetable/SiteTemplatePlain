@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="{{ assets_prefix }}assets/style.css?sha256={{ style_css_sha256 }}">
     <link rel="preload" href="{{ assets_prefix }}planet.json" as="fetch" type="application/json" crossorigin="anonymous">
+    <link rel="preload" href="{{ assets_prefix }}rss.xml" as="fetch" type="application/rss+xml" crossorigin="anonymous">
     <title>{% block title %}{{ page_title|escape }}{% endblock %}</title>
     <script>
       let userAgentRegex = /Planet\/\S*/;
