@@ -331,9 +331,7 @@ p, h1, h2, h3, h4, h5, h6, .date, ul, ol, pre, hr {
         --h1-font-size: 1.75em;
     }
 
-    .breadcrumb {
-        width: calc(100% + 20px);
-        margin-left: -40px;
-        padding-left: 40px;
+    .breadcrumb-inner {
+        padding: 0px 20px 0px 20px;
     }
 }
