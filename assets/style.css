@@ -102,11 +102,11 @@ hr {
     padding: 20px 0;
     position: sticky;
     top: 0;
-    z-index: 99;
     background-color: var(--breadcrumb-background-color);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--breadcrumb-border-color);
+    border-bottom: 1px solid var(--breadcrumb-border-color);
+    box-sizing: border-box;
 }
 
 .breadcrumb-inner {
