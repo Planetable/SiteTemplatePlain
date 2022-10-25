@@ -60,7 +60,10 @@ a:hover {
 }
 
 code {
-    line-break: anywhere;
+    white-space:pre;
+    white-space:pre-wrap;
+    word-break:break-all;
+    word-wrap:break-word;
 }
 
 h1 {
