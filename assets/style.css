@@ -343,3 +343,20 @@ li:has(input[type="checkbox"]) {
         padding: 0px 20px 0px 20px;
     }
 }
+
+blockquote {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 5px solid;
+    margin-left: 2em;
+    padding-left: 1em;
+    border-color: #bababa;
+    color: #656565;
+}
