@@ -78,6 +78,7 @@ code {
 code {
     background-color: #f3f4f4;
     padding: 0 2px 0 2px;
+    border-radius: 3px;
 }
 
 code,
@@ -85,6 +86,21 @@ pre,
 samp,
 tt {
     font-family: var(--monospace);
+}
+
+pre {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+pre {
+    display: block;
+    break-inside: avoid;
+    text-align: left;
 }
 
 h1 {
