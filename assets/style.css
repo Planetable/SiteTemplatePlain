@@ -5,8 +5,10 @@
     --foreground-secondary-color: #666;
     --nav-current-background-color: #e2e2e2;
     --nav-current-foreground-color: #fff;
-    --icon-secondary-filter: invert(43%) sepia(22%) saturate(10%) hue-rotate(58deg) brightness(87%) contrast(93%);
-    --icon-social-filter: invert(28%) sepia(47%) saturate(2131%) hue-rotate(197deg) brightness(95%) contrast(78%);
+    --icon-secondary-filter: invert(43%) sepia(22%) saturate(10%)
+        hue-rotate(58deg) brightness(87%) contrast(93%);
+    --icon-social-filter: invert(28%) sepia(47%) saturate(2131%)
+        hue-rotate(197deg) brightness(95%) contrast(78%);
     --border-color: #e2e2e2;
     --chevron-color: #333;
     --site-title-font-size: 2.5em;
@@ -17,6 +19,7 @@
     --content-max-width: 700px;
     --breadcrumb-background-color: rgba(255, 255, 255, 0.8);
     --breadcrumb-border-color: rgba(255, 255, 255, 0.7);
+    --monospace: "Lucida Console", Consolas, "Courier", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,8 +30,10 @@
         --foreground-secondary-color: #adadaf;
         --nav-current-background-color: #adadaf;
         --nav-current-foreground-color: #fafaff;
-        --icon-secondary-filter: invert(87%) sepia(6%) saturate(58%) hue-rotate(202deg) brightness(80%) contrast(87%);
-        --icon-social-filter: invert(64%) sepia(85%) saturate(4030%) hue-rotate(203deg) brightness(108%) contrast(102%);
+        --icon-secondary-filter: invert(87%) sepia(6%) saturate(58%)
+            hue-rotate(202deg) brightness(80%) contrast(87%);
+        --icon-social-filter: invert(64%) sepia(85%) saturate(4030%)
+            hue-rotate(203deg) brightness(108%) contrast(102%);
         --border-color: #2b2b2d;
         --chevron-color: #eee;
         --breadcrumb-background-color: rgba(32, 32, 34, 0.8);
@@ -46,10 +51,13 @@ body {
     background-color: var(--background-color);
     padding: 0;
     margin: 0;
-    font-family: "Helvetica Neue", "Arial", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-family: "Helvetica Neue", "Arial", "Hiragino Sans GB",
+        "Microsoft YaHei", sans-serif;
 }
 
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
     color: var(--link-color);
     text-decoration: none;
     line-break: anywhere;
@@ -64,6 +72,19 @@ code {
     white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
+    text-align: left;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+code,
+pre,
+samp,
+tt {
+    font-family: var(--monospace);
 }
 
 h1 {
@@ -134,7 +155,9 @@ hr {
 }
 
 .main {
-    max-width: calc(800px - env(safe-area-inset-left) - env(safe-area-inset-left));
+    max-width: calc(
+        800px - env(safe-area-inset-left) - env(safe-area-inset-left)
+    );
     margin: 0 auto;
     padding: 20px;
     color: var(--foreground-color);
@@ -211,7 +234,8 @@ hr {
     display: inline-block;
 }
 
-.item-video-icon, .item-audio-icon {
+.item-video-icon,
+.item-audio-icon {
     width: 1em;
     height: 1em;
     filter: var(--icon-secondary-filter);
@@ -278,7 +302,8 @@ img.avatar {
     align-items: center;
 }
 
-.nav-current:link, .nav-current:visited {
+.nav-current:link,
+.nav-current:visited {
     background-color: var(--nav-current-background-color);
     color: var(--nav-current-foreground-color);
     border-radius: 2em;
@@ -292,7 +317,8 @@ img.avatar {
     text-decoration: none;
 }
 
-.nav-item:link, .nav-item:visited {
+.nav-item:link,
+.nav-item:visited {
     color: var(--foreground-color);
     font-size: 1em;
     line-height: 1;
@@ -314,7 +340,18 @@ figcaption {
     color: var(--foreground-secondary-color);
 }
 
-p, h1, h2, h3, h4, h5, h6, .date, ul, ol, pre, hr {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.date,
+ul,
+ol,
+pre,
+hr {
     max-width: var(--content-max-width);
     margin-left: auto;
     margin-right: auto;
