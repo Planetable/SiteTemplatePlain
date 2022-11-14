@@ -18,6 +18,7 @@
     --breadcrumb-background-color: rgba(255, 255, 255, 0.8);
     --breadcrumb-border-color: rgba(255, 255, 255, 0.7);
     --monospace: "Lucida Console", Consolas, "Courier", monospace;
+    --code-background-color: #f8f8f8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,6 +35,7 @@
         --chevron-color: #eee;
         --breadcrumb-background-color: rgba(32, 32, 34, 0.8);
         --breadcrumb-border-color: rgba(32, 32, 34, 0.7);
+        --code-background-color: #2b2b2d;
     }
 }
 
@@ -69,7 +71,7 @@ code {
 }
 
 code {
-    background-color: #f3f4f4;
+    background-color: var(--code-background-color);
     padding: 0 2px 0 2px;
     border-radius: 3px;
 }
@@ -79,11 +81,10 @@ code, pre, samp, tt {
 }
 
 pre {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
+    border: 1px solid var(--border-color);
+    background-color: var(--code-background-color);
     border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
+    padding: 10px;
     font-size: 0.9em;
 }
 
@@ -384,6 +385,6 @@ blockquote {
     border-left: 5px solid;
     margin-left: 2em;
     padding-left: 1em;
-    border-color: #bababa;
-    color: #656565;
+    border-color: var(--border-color);
+    color: var(--foreground-secondary-color);
 }
