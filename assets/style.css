@@ -17,6 +17,7 @@
     --content-max-width: 700px;
     --breadcrumb-background-color: rgba(255, 255, 255, 0.8);
     --breadcrumb-border-color: rgba(255, 255, 255, 0.7);
+    --monospace: "Lucida Console", Consolas, "Courier", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,6 +65,32 @@ code {
     white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
+    text-align: left;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+    border-radius: 3px;
+}
+
+code, pre, samp, tt {
+    font-family: var(--monospace);
+}
+
+pre {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+pre {
+    display: block;
+    break-inside: avoid;
+    text-align: left;
 }
 
 h1 {
