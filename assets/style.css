@@ -388,3 +388,9 @@ blockquote {
     border-color: var(--border-color);
     color: var(--foreground-secondary-color);
 }
+
+footer {
+    font-size: 0.9em;
+    color: #999;
+    width: 100%;
+}
