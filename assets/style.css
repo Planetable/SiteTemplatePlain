@@ -19,6 +19,7 @@
     --breadcrumb-border-color: rgba(255, 255, 255, 0.7);
     --monospace: "Lucida Console", Consolas, "Courier", monospace;
     --code-background-color: #f8f8f8;
+    --footer-foreground-color: #999
 }
 
 @media (prefers-color-scheme: dark) {
@@ -391,6 +392,6 @@ blockquote {
 
 footer {
     font-size: 0.9em;
-    color: #999;
+    color: var(--footer-foreground-color);
     width: 100%;
 }
