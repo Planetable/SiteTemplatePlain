@@ -138,6 +138,7 @@ hr {
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--breadcrumb-border-color);
     box-sizing: border-box;
+    z-index: 99;
 }
 
 .breadcrumb-inner {
@@ -268,6 +269,7 @@ hr {
     top: 0;
     left: 0;
     border-radius: 2px;
+    z-index: 1;
 }
 
 .audio-container {
