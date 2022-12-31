@@ -55,7 +55,7 @@
   {% for article in articles %}
   <div class="item">
     {% if article.heroImage != nil %}
-    <div class="item-hero-image"><a href="{{ article.id }}/"><img src="{{ article.id }}/{{ article.heroImage }}"></a></div>
+    <!--<div class="item-hero-image"><a href="{{ article.id }}/"><img src="{{ article.id }}/{{ article.heroImage }}"></a></div>-->
     {% endif %}
     <div class="item-main">
       <div class="item-title"><a href=".{{ article.link }}">{{ article.title|escape }}</a></div>
