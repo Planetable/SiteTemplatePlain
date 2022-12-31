@@ -6,17 +6,20 @@
 <meta property="og:site_name" content="{{ planet.name|escape }}" />
 <meta property="og:description" content="{{ article_summary|escape }}" />
 <meta property="article:published_time" content="{{ article.created|formatDateC }}" />
-  {% if has_avatar %}
+  {% if article.heroImage != nil %}
+  <meta property="og:image" content="{{ article.heroImage }}" />
+  <meta property="og:image:alt" content="{{ article.title|escape }}" />
+  {% else %}
   <meta property="og:image" content="{{ assets_prefix }}avatar.png" />
-  <meta property="og:image:width" content="72" />
-  <meta property="og:image:height" content="72" />
   <meta property="og:image:alt" content="{{ planet.name|escape }}" />
   {% endif %}
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="{{ planet.name|escape }}" />
 <meta name="twitter:title" content="{{ article.title|escape }}" />
 <meta name="twitter:description" content="{{ article_summary|escape }}" />
-  {% if has_avatar %}
+  {% if article.heroImage != nil %}
+  <meta name="twitter:image" content="{{ article.heroImage }}" />
+  {% else %}
   <meta name="twitter:image" content="{{ assets_prefix }}avatar.png" />
   {% endif %}
 <!-- End Open Graph Tags -->
