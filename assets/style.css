@@ -14,7 +14,7 @@
     --item-gap: 30px;
     --inner-gap: 20px;
     --title-line-height: 1.2;
-    --content-max-width: 700px;
+    --content-max-width: 100%;
     --breadcrumb-background-color: rgba(255, 255, 255, 0.8);
     --breadcrumb-border-color: rgba(255, 255, 255, 0.7);
     --monospace: "Lucida Console", Consolas, "Courier", monospace;
@@ -112,8 +112,8 @@ h2 {
 
 .content img {
     display: block;
-    max-width: 100%;
     margin: 40px auto 40px auto;
+    max-width: 100%;
 }
 
 hr {
@@ -149,7 +149,7 @@ hr {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: var(--content-max-width);
+    max-width: calc(700px - env(safe-area-inset-left) - env(safe-area-inset-left));
     margin-left: auto;
     margin-right: auto;
 }
@@ -167,7 +167,7 @@ hr {
 }
 
 .main {
-    max-width: calc(800px - env(safe-area-inset-left) - env(safe-area-inset-left));
+    max-width: calc(700px - env(safe-area-inset-left) - env(safe-area-inset-left));
     margin: 0 auto;
     padding: 20px;
     color: var(--foreground-color);
@@ -287,6 +287,8 @@ hr {
     position: relative;
     border-radius: 2px;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .video {
@@ -301,6 +303,9 @@ hr {
 
 .audio-container {
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--content-max-width);
 }
 
 .audio {
@@ -369,16 +374,6 @@ img.avatar {
     text-decoration: none;
 }
 
-figure {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-figcaption {
-    font-size: 0.8em;
-    color: var(--foreground-secondary-color);
-}
-
 p, h1, h2, h3, h4, h5, h6, .date, ul, ol, pre, hr {
     max-width: var(--content-max-width);
     margin-left: auto;
@@ -394,6 +389,17 @@ p, h1, h2, h3, h4, h5, h6, .date, ul, ol, pre, hr {
 li:has(input[type="checkbox"]) {
     list-style-type: none;
     margin-left: 0px;
+}
+
+figure {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+figcaption {
+    font-size: 0.8em;
+    color: var(--foreground-secondary-color);
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
