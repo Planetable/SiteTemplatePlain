@@ -53,6 +53,15 @@
   {% if planet.telegramUsername.count > 0 %}
   <a href="https://t.me/{{ planet.telegramUsername|escapejs }}" target="_blank"><img src="{{ assets_prefix }}assets/telegram.svg" alt="t.me/{{ planet.telegramUsername|escapejs }}" class="social-icon" width="1em"></a>
   {% endif %}
+  {% if planet.juiceboxEnabled %}
+  {% if planet.juiceboxProjectID != nil %}
+    <a href="https://juicebox.money/v2/p/{{ planet.juiceboxProjectID }}" target="_blank"><img src="{{ assets_prefix }}assets/juicebox.svg" alt="Juicebox Project ID {{ planet.juiceboxProjectID }}" class="social-icon" width="1em"></a>
+  {% else %}
+    {% if planet.juiceboxProjectIDGoerli != nil %}
+    <a href="https://goerli.juicebox.money/v2/p/{{ planet.juiceboxProjectIDGoerli }}" target="_blank"><img src="{{ assets_prefix }}assets/juicebox.svg" alt="Goerli Juicebox Project ID {{ planet.juiceboxProjectIDGoerli }}" class="social-icon" width="1em"></a>
+    {% endif %}
+  {% endif %}
+  {% endif %}
 </div></div>
 <div class="items">
   {% for article in articles %}
