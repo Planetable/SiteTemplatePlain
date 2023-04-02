@@ -4,5 +4,6 @@
   "author": "Planetable Team",
   "authorWebsite": "https://planetable.xyz",
   "version": "1.4.1",
-  "buildNumber": 83
+  "idealItemsPerPage": 10,
+  "buildNumber": 86
 }
