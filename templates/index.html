@@ -19,6 +19,13 @@
   <meta name="twitter:image" content="{{ og_image_url }}" />
   {% endif %}
 <!-- End Open Graph Tags -->
+<!-- Pagination -->
+{% if previous_page %}
+<link rel="prev" href="./{{ previous_page }}">
+{% endif %}
+{% if next_page %}
+<link rel="next" href="./{{ next_page }}">
+{% endif %}
 {% endblock %}
 {% block main %}
 <div class="top">
