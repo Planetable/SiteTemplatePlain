@@ -382,6 +382,17 @@ img.avatar {
     padding: 10px;
 }
 
+.pages-container {
+    display: flex;
+    align-items: center;
+}
+
+.pages-info {
+    flex: 1;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .nav-container {
     text-align: left;
     max-width: var(--content-max-width);
