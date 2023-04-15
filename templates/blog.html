@@ -1,28 +1,6 @@
 {% extends 'base.html' %}
 {% block head %}
-<!-- Open Graph Tags -->
-<meta property="og:type" content="article" />
-<meta property="og:title" content="{{ article.title|escape }}" />
-<meta property="og:site_name" content="{{ planet.name|escape }}" />
-<meta property="og:description" content="{{ article_summary|escape }}" />
-<meta property="article:published_time" content="{{ article.created|formatDateC }}" />
-  {% if article.heroImage != nil %}
-  <meta property="og:image" content="{{ social_image_url }}" />
-  <meta property="og:image:alt" content="{{ article.title|escape }}" />
-  {% else %}
-  <meta property="og:image" content="{{ social_image_url }}" />
-  <meta property="og:image:alt" content="{{ planet.name|escape }}" />
-  {% endif %}
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="{{ planet.name|escape }}" />
-<meta name="twitter:title" content="{{ article.title|escape }}" />
-<meta name="twitter:description" content="{{ article_summary|escape }}" />
-  {% if article.heroImage != nil %}
-  <meta name="twitter:image" content="{{ social_image_url }}" />
-  {% else %}
-  <meta name="twitter:image" content="{{ social_image_url }}" />
-  {% endif %}
-<!-- End Open Graph Tags -->
+{% include 'modules/article_seo.html' %}
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     if (!window.PLANET.visitedFromPlanetClient) {
@@ -32,14 +10,21 @@
       if(document.getElementById('footer')){
         document.querySelector('#footer').style.display = 'block';
       }
+      console.log("Current article_type: {{ article_type }}")
+      {% if article_type == 0 %}
       breadcrumb([
         { text: "{{ planet.name|escapejs }}", url: '../' },
       ]);
+      {% endif %}
     }
   });
 </script>
 {% endblock %}
 {% block main %}
+{% if article_type == 1 %}
+{% include 'modules/top.html' %}
+{% include 'modules/nav.html' %}
+{% endif %}
 <h1>{{ article.title|escape }}</h1>
 <div class="date">{{ article.created|formatDate }}</div>
 <div class="content">

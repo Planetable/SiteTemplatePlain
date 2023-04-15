@@ -1,24 +1,6 @@
 {% extends 'base.html' %}
 {% block head %}
-<!-- Open Graph Tags -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="{{ planet.name|escape }}" />
-<meta property="og:description" content="{{ page_description|escape }}" />
-<meta property="og:site_name" content="{{ planet.name|escape }}" />
-  {% if has_avatar %}
-  <meta property="og:image" content="{{ og_image_url }}" />
-  <meta property="og:image:width" content="72" />
-  <meta property="og:image:height" content="72" />
-  <meta property="og:image:alt" content="{{ planet.name|escape }}" />
-  {% endif %}
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="{{ planet.name|escape }}" />
-<meta name="twitter:title" content="{{ planet.name|escape }}" />
-<meta name="twitter:description" content="{{ page_description|escape }}" />
-  {% if has_avatar %}
-  <meta name="twitter:image" content="{{ og_image_url }}" />
-  {% endif %}
-<!-- End Open Graph Tags -->
+{% include 'modules/planet_seo.html' %}
 <!-- Pagination -->
 {% if previous_page %}
 <link rel="prev" href="./{{ previous_page }}">
@@ -28,48 +10,8 @@
 {% endif %}
 {% endblock %}
 {% block main %}
-<div class="top">
-  {% if has_avatar %}
-  <img src="{{ assets_prefix }}avatar.png" width="72" height="72" class="avatar">
-  {% endif %}
-  <div class="site-info">
-    <div class="site-title">{{ page_title|escape }}</div>
-    {% if page_description_html.count > 0 %}<div class="site-about">{{ page_description_html }}</div>{% endif %}
-  </div>
-</div>
-<div class="nav-container"><div class="nav">
-  <a href="./" class="nav-current">Home</a>
-  <!-- TODO: Implement Article.kind and Archive
-
-  <a href="./" class="nav-item">About</a>
-  <a href="./" class="nav-item">Archive</a>
-  <a href="./" class="nav-item">Contact</a>
-  <a href="./" class="nav-item">Custom Page</a>
-
-  -->
-  <a href="{{ assets_prefix }}rss.xml" target="_blank"><img src="{{ assets_prefix }}assets/rss.svg" alt="RSS" class="social-icon" width="1em"></a>
-  {% if has_podcast %}
-  <a href="{{ assets_prefix }}podcast.xml" target="_blank"><img src="{{ assets_prefix }}assets/podcast.svg" alt="Podcast" class="social-icon" width="1em"></a>
-  {% endif %}
-  {% if planet.twitterUsername.count > 0 %}
-  <a href="https://twitter.com/{{ planet.twitterUsername|escapejs }}" target="_blank"><img src="{{ assets_prefix }}assets/twitter.svg" alt="twitter.com/{{ planet.twitterUsername|escapejs }}" class="social-icon" width="1em"></a>
-  {% endif %}
-  {% if planet.githubUsername.count > 0 %}
-  <a href="https://github.com/{{ planet.githubUsername|escapejs }}" target="_blank"><img src="{{ assets_prefix }}assets/github.svg" alt="github.com/{{ planet.githubUsername|escapejs }}" class="social-icon" width="1em"></a>
-  {% endif %}
-  {% if planet.telegramUsername.count > 0 %}
-  <a href="https://t.me/{{ planet.telegramUsername|escapejs }}" target="_blank"><img src="{{ assets_prefix }}assets/telegram.svg" alt="t.me/{{ planet.telegramUsername|escapejs }}" class="social-icon" width="1em"></a>
-  {% endif %}
-  {% if planet.juiceboxEnabled %}
-  {% if planet.juiceboxProjectID != nil %}
-    <a href="https://juicebox.money/v2/p/{{ planet.juiceboxProjectID }}" target="_blank"><img src="{{ assets_prefix }}assets/juicebox.svg" alt="Juicebox Project ID {{ planet.juiceboxProjectID }}" class="social-icon" width="1em"></a>
-  {% else %}
-    {% if planet.juiceboxProjectIDGoerli != nil %}
-    <a href="https://goerli.juicebox.money/v2/p/{{ planet.juiceboxProjectIDGoerli }}" target="_blank"><img src="{{ assets_prefix }}assets/juicebox.svg" alt="Goerli Juicebox Project ID {{ planet.juiceboxProjectIDGoerli }}" class="social-icon" width="1em"></a>
-    {% endif %}
-  {% endif %}
-  {% endif %}
-</div></div>
+{% include 'modules/top.html' %}
+{% include 'modules/nav.html' %}
 <div class="items">
   {% for article in articles %}
   <div class="item">
@@ -87,13 +29,5 @@
   </div>
   {% endfor %}
 </div>
-<div class="pages-container">
-  {% if previous_page %}
-  <a href="./{{ previous_page }}" class="nav-current">Previous Page</a>
-  {% endif %}
-  <div class="pages-info">Page {{ current_page }} of {{ total_pages }}</div>
-  {% if next_page %}
-  <a href="./{{ next_page }}" class="nav-current">Next Page</a>
-  {% endif %}
-</div>
+{% include 'modules/pages.html' %}
 {% endblock %}

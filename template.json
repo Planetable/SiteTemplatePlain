@@ -3,7 +3,7 @@
   "description": "A plain template for Planet",
   "author": "Planetable Team",
   "authorWebsite": "https://planetable.xyz",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "idealItemsPerPage": 10,
-  "buildNumber": 88
+  "buildNumber": 91
 }

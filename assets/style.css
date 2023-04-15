@@ -3,8 +3,13 @@
     --foreground-color: #000;
     --link-color: #336bad;
     --foreground-secondary-color: #666;
-    --nav-current-background-color: #000;
+
+    --nav-current-background-color: #0f0f0f;
     --nav-current-foreground-color: #fff;
+    --nav-item-background-color: #f2f2f2;
+    --nav-item-foreground-color: #0f0f0f;
+    --nav-item-hover-background-color: #e5e5e5;
+
     --icon-secondary-filter: invert(43%) sepia(22%) saturate(10%) hue-rotate(58deg) brightness(87%) contrast(93%);
     --icon-social-filter: invert(28%) sepia(47%) saturate(2131%) hue-rotate(197deg) brightness(95%) contrast(78%);
     --border-color: #e2e2e2;
@@ -27,8 +32,13 @@
         --foreground-color: #fff;
         --link-color: #6699ff;
         --foreground-secondary-color: #adadaf;
-        --nav-current-background-color: #3d3d3f;
-        --nav-current-foreground-color: #fafaff;
+
+        --nav-current-background-color: #0f0f0f;
+        --nav-current-foreground-color: #f1f1f1;
+        --nav-item-background-color: #272727;
+        --nav-item-foreground-color: #f1f1f1;
+        --nav-item-hover-background-color: #3f3f3f;
+
         --icon-secondary-filter: invert(87%) sepia(6%) saturate(58%) hue-rotate(202deg) brightness(80%) contrast(87%);
         --icon-social-filter: invert(64%) sepia(85%) saturate(4030%) hue-rotate(203deg) brightness(108%) contrast(102%);
         --border-color: #2b2b2d;
@@ -407,7 +417,7 @@ img.avatar {
 
 .nav {
     display: inline-flex;
-    gap: 16px;
+    gap: 12px;
     padding: 2px;
     box-sizing: border-box;
     margin: 0px auto 40px auto;
@@ -422,22 +432,27 @@ img.avatar {
     line-height: 1;
     display: inline-block;
     padding: 5px 10px 5px 10px;
+    transition: background-color 0.15s;
 }
 
 .nav-current:hover {
     text-decoration: none;
-    background-color: var(--link-color);
+    background-color: var(--nav-current-background-color);
 }
 
 .nav-item:link, .nav-item:visited {
-    color: var(--foreground-color);
+    background-color: var(--nav-item-background-color);
+    color: var(--nav-item-foreground-color);
+    border-radius: 2em;
     font-size: 1em;
     line-height: 1;
     display: inline-block;
     padding: 5px 10px 5px 10px;
+    transition: background-color 0.15s;
 }
 
 .nav-item:hover {
+    background-color: var(--nav-item-hover-background-color);
     text-decoration: none;
 }
 
