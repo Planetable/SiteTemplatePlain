@@ -462,8 +462,12 @@ p, h1, h2, h3, h4, h5, h6, .date, ul, ol, pre, hr {
     margin-right: auto;
 }
 
-ul, ol {
+ul {
     padding-inline-start: 1em;
+}
+
+ol {
+    padding-inline-start: 1.25em;
 }
 
 .site-about p {
