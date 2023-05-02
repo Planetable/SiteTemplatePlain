@@ -422,6 +422,7 @@ img.avatar {
     box-sizing: border-box;
     margin: 0px auto 40px auto;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-current:link, .nav-current:visited {
