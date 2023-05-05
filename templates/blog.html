@@ -19,19 +19,11 @@
     } else {
 
     }
-    const todoItems = document.querySelectorAll('li:has(input[type="checkbox"])');
-    i = 0;
-    todoItems.forEach(item => {
-      console.log(item);
+    const todos = document.querySelectorAll('li:has(input[type="checkbox"])');
+    let i = 1;
+    todos.forEach(item => {
       item.id = "todo-item-" + i;
-      item.addEventListener('click', (e) => {
-        const selector = e.target.id;
-        console.log(selector);
-        const checkbox = document.querySelector(`#${selector}>input[type="checkbox"]`);
-        // toggle checkbox
-        checkbox.checked = !checkbox.checked;
-      });
-      i++
+      i++;
     });
   });
 </script>
