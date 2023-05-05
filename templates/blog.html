@@ -16,7 +16,23 @@
         { text: "{{ planet.name|escapejs }}", url: '../' },
       ]);
       {% endif %}
+    } else {
+
     }
+    const todoItems = document.querySelectorAll('li:has(input[type="checkbox"])');
+    i = 0;
+    todoItems.forEach(item => {
+      console.log(item);
+      item.id = "todo-item-" + i;
+      item.addEventListener('click', (e) => {
+        const selector = e.target.id;
+        console.log(selector);
+        const checkbox = document.querySelector(`#${selector}>input[type="checkbox"]`);
+        // toggle checkbox
+        checkbox.checked = !checkbox.checked;
+      });
+      i++
+    });
   });
 </script>
 {% endblock %}

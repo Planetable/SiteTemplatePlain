@@ -488,6 +488,7 @@ li input[type="checkbox"] {
 li:has(input[type="checkbox"]) {
     list-style-type: none;
     margin-left: 0px;
+    pointer-events: none;
 }
 
 li:has(input[type="checkbox"]:not(:checked):disabled)::before {
@@ -500,6 +501,7 @@ li:has(input[type="checkbox"]:not(:checked):disabled)::before {
     height: 1em;
     background-size: 1em 1em;
     filter: var(--icon-social-filter);
+    pointer-events: all;
 }
 
 li:has(input[type="checkbox"]:checked:disabled)::before {
@@ -511,6 +513,7 @@ li:has(input[type="checkbox"]:checked:disabled)::before {
     width: 1.25em;
     height: 1em;
     background-size: 1em 1em;
+    pointer-events: all;
 }
 
 figure {
