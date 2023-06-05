@@ -519,25 +519,18 @@ li:has(input[type="checkbox"]:checked:disabled)::before {
 figure {
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+figure>img:first-child {
+    margin: 40px 0px 20px 0px;
 }
 
 figcaption {
     font-size: 0.8em;
     color: var(--foreground-secondary-color);
     text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    :root {
-        --item-gap: 15px;
-        --inner-gap: 10px;
-        --site-title-font-size: 2em;
-        --h1-font-size: 1.75em;
-    }
-
-    .breadcrumb-inner {
-        padding: 0px 20px 0px 20px;
-    }
 }
 
 blockquote {
@@ -568,4 +561,17 @@ footer {
     max-width: var(--content-max-width);
     margin-left: auto;
     margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --item-gap: 15px;
+        --inner-gap: 10px;
+        --site-title-font-size: 2em;
+        --h1-font-size: 1.75em;
+    }
+
+    .breadcrumb-inner {
+        padding: 0px 20px 0px 20px;
+    }
 }
