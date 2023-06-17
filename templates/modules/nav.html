@@ -1,7 +1,7 @@
 <div class="nav-container"><div class="nav">
   <a href="{{ assets_prefix }}" class="{% if current_item_type == 'index' %}nav-current{% else %}nav-item{% endif %}">Home</a>
   {% for item in site_navigation %}
-  <a href="{{ assets_prefix }}{% if item.slug.count > 0 %}{{ item.slug }}{% else %}{{ item.id }}{% endif %}/" class="{% if item.id == article_id %}nav-current{% else %}nav-item{% endif %}">{{ item.title }}</a>
+  <a href="{% if item.externalLink.count > 0 %}{{ item.externalLink }}{% else %}{{ assets_prefix }}{% if item.slug.count > 0 %}{{ item.slug }}{% else %}{{ item.id }}{% endif %}/{% endif %}" class="{% if item.id == article_id %}nav-current{% else %}nav-item{% endif %}"{% if item.externalLink.count > 0 %} target="_blank"{% endif %}>{{ item.title }}</a>
   {% endfor %}
   <a href="{{ assets_prefix }}rss.xml" target="_blank"><img src="{{ assets_prefix }}assets/rss.svg" alt="RSS" class="social-icon" width="1em"></a>
   {% if has_podcast %}
