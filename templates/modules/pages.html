@@ -2,7 +2,7 @@
   {% if previous_page %}
   <a href="./{{ previous_page }}" class="nav-current">Previous Page</a>
   {% endif %}
-  <div class="pages-info">Page {{ current_page }} of {{ total_pages }}</div>
+  <div class="pages-info">{% if total_pages > 1 %}Page {{ current_page }} of {{ total_pages }}{% else %}&nbsp;{% endif %}</div>
   {% if next_page %}
   <a href="./{{ next_page }}" class="nav-current">Next Page</a>
   {% endif %}

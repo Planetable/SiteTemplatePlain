@@ -12,6 +12,13 @@
 {% block main %}
 {% include 'modules/top.html' %}
 {% include 'modules/nav.html' %}
+{% if tag_key %}
+<div class="tag-container">
+  <div class="tag-caption">Tag</div>
+  <div class="tag-title">{{ tag_value }}</div>
+  <div class="tag-count">{{ articles.count }} article{% if articles.count > 1 %}s{% endif %}</div>
+</div>
+{% endif %}
 <div class="items">
   {% for article in articles %}
   <div class="item">

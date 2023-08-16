@@ -24,6 +24,14 @@
         let inner = document.createElement('div');
         inner.classList.add('breadcrumb-inner');
         container.appendChild(inner);
+        {% if has_avatar %}
+        let avatarHTML = `
+          <div class="breadcrumb-avatar">
+            <a href="{{ assets_prefix }}"><img src="{{ assets_prefix }}avatar.png" height="16" class="breadcrumb-avatar-image" border="0" /></a>
+          </div>
+        `;
+        inner.innerHTML = avatarHTML;
+        {% endif %}
         if (!stubs || !stubs.length) {
           return;
         }
@@ -59,8 +67,11 @@
           }
         }
 
-        let main = document.querySelector('.wrapper');
-        main.insertAdjacentElement('afterbegin', container);
+        let main = document.querySelector('.main');
+        main.style.paddingTop = '10px';
+
+        let wrapper = document.querySelector('.wrapper');
+        wrapper.insertAdjacentElement('afterbegin', container);
       }
     </script>
     {% if has_avatar %}
