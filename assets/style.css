@@ -120,6 +120,13 @@ h2 {
     margin-bottom: 20px;
 }
 
+.chevron {
+    font-size: 1.1em;
+    color: var(--chevron-color);
+    font-family: "Lucida Grande";
+    font-weight: 500;
+}
+
 .content img {
     display: block;
     margin: 40px auto 40px auto;
@@ -577,6 +584,9 @@ blockquote {
 
 .tag-caption {
     font-size: 0.8em;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
 }
 
 .tag-title {
@@ -602,6 +612,31 @@ blockquote {
     flex: 1;
     display: flex;
     gap: 0.5em;
+}
+
+.tag-cloud {
+    column-count: 3;
+    column-rule: 1px solid var(--border-color);
+    column-gap: 20px;
+    line-height: 2;
+}
+
+.tag-cloud-item {
+    display: block;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.tag-cloud-item-count {
+    display: block;
+    background-color: var(--border-color);
+    font-size: 0.75em;
+    color: var(--background-color);
+    padding: 1px 4px 1px 4px;
+    border-radius: 20px;
+    line-height: 1;
 }
 
 .tag-item {
@@ -640,5 +675,9 @@ footer {
 
     .breadcrumb-inner {
         padding: 0px 20px 0px 20px;
+    }
+
+    .tag-cloud {
+        column-count: 2;
     }
 }
