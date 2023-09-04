@@ -9,7 +9,7 @@
 {% include 'modules/nav.html' %}
 <div class="archive-container">
   <div class="archive-title">Archive</div>
-  <div class="archive-count">{{ articles.count }} articles</div>
+  <div class="archive-count">{{ articles.count }} article{% if articles.count > 1 %}s{% endif %}</div>
 </div>
 <div class="archive-list">
 {% for item in archive_sections %}
