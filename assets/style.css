@@ -612,6 +612,7 @@ blockquote {
     flex: 1;
     display: flex;
     gap: 0.5em;
+    flex-wrap: wrap;
 }
 
 .tag-cloud {
@@ -734,8 +735,16 @@ footer {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .archive-list {
         column-count: 1;
+    }
+
+    .content table {
+        table-layout: fixed;
+    }
+
+    .content table td {
+        line-break: anywhere;
     }
 }
