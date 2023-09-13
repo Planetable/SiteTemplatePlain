@@ -625,19 +625,18 @@ blockquote {
 .tag-cloud-item {
     display: block;
     font-size: 1em;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
 }
 
 .tag-cloud-item-count {
-    display: block;
+    display: inline-block;
     background-color: var(--border-color);
     font-size: 0.75em;
     color: var(--background-color);
     padding: 1px 4px 1px 4px;
     border-radius: 20px;
     line-height: 1;
+    vertical-align: middle;
+    margin-left: 0.5em;
 }
 
 .tag-item {

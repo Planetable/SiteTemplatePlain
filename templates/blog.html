@@ -52,10 +52,5 @@
   {% endif %}
   {{ content_html }}
 </div>
-{% if article.tags.count > 0 %}
-<div class="tags-container">
-<span>Tags:</span>
-<div class="tags">{% for tag in article.tags %}<a href="{{ assets_prefix }}{{ tag }}.html" class="tag-item">{{ article.tags[tag] }}</a>{% endfor %}</div>
-</div>
-{% endif %}
+{% include 'modules/article_tags.html' %}
 {% endblock %}
