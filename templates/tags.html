@@ -5,10 +5,15 @@
 {% block main %}
 {% include 'modules/top.html' %}
 {% include 'modules/nav.html' %}
+
+<!-- START: tag container -->
 <div class="tag-container">
   <div class="tag-title">Tags</div>
   <div class="tag-count">{{ tags.count }} tag{% if tags.count > 1 %}s{% endif %}</div>
 </div>
+<!-- END: tag container -->
+
+<!-- START: tag list -->
 <div class="tag-cloud">
 {% for tag in tags %}
 <div class="tag-cloud-item">
@@ -17,4 +22,6 @@
 </div>
 {% endfor %}
 </div>
+<!-- END: tag list -->
+
 {% endblock %}

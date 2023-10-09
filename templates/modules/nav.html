@@ -3,7 +3,7 @@
   {% if planet.tags.count > 0 %}<a href="{{ assets_prefix }}tags.html" class="{% if current_item_type == 'tags' %}nav-current{% else %}nav-item{% endif %}">Tags</a>{% endif %}
   <a href="{{ assets_prefix }}archive.html" class="{% if current_item_type == 'archive' %}nav-current{% else %}nav-item{% endif %}">Archive</a>
   {% for item in site_navigation %}
-  <a href="{% if item.externalLink.count > 0 %}{{ item.externalLink }}{% else %}{{ assets_prefix }}{% if item.slug.count > 0 %}{{ item.slug }}{% else %}{{ item.id }}{% endif %}/{% endif %}" class="{% if item.id == article_id %}nav-current{% else %}nav-item{% endif %}"{% if item.externalLink.count > 0 %} target="_blank"{% endif %}>{{ item.title }}</a>
+  <a href="{% if item.externalLink.count > 0 %}{{ item.externalLink }}{% else %}{{ assets_prefix }}{% if item.slug.count > 0 %}{{ item.slug }}{% else %}{{ item.id }}{% endif %}/{% endif %}" class="{% if item.id == article_id %}nav-current{% else %}nav-item{% endif %}"{% if item.externalLink.count > 0 %} target="_blank"{% endif %}>{{ item.title|escape }}</a>
   {% endfor %}
   <a href="{{ assets_prefix }}rss.xml" target="_blank"><img src="{{ assets_prefix }}assets/rss.svg" alt="RSS" class="social-icon" width="1em"></a>
   {% if has_podcast %}

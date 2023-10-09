@@ -7,10 +7,13 @@
 {% block main %}
 {% include 'modules/top.html' %}
 {% include 'modules/nav.html' %}
+
 <div class="archive-container">
   <div class="archive-title">Archive</div>
   <div class="archive-count">{{ articles.count }} article{% if articles.count > 1 %}s{% endif %}</div>
 </div>
+
+<!-- START: archive list -->
 <div class="archive-list">
 {% for item in archive_sections %}
 <div class="archive-list-header">{{ item }}</div>
@@ -21,4 +24,6 @@
 {% endfor %}
 {% endfor %}
 </div>
+<!-- END: archive list -->
+
 {% endblock %}
