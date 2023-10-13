@@ -500,6 +500,8 @@ ol {
     margin-right: 0px;
 }
 
+/* START: To Do Items */
+
 ul:has(input[type="checkbox"]) {
     padding-inline-start: 0px;
 }
@@ -538,6 +540,8 @@ li:has(input[type="checkbox"]:checked:disabled)::before {
     background-size: 1em 1em;
     pointer-events: all;
 }
+
+/* END: To Do Items */
 
 figure {
     margin-top: 20px;
