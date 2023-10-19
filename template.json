@@ -3,7 +3,7 @@
   "description": "A plain template for Planet",
   "author": "Planetable Team",
   "authorWebsite": "https://planetable.xyz",
-  "version": "1.7.9",
+  "version": "1.7.10",
   "idealItemsPerPage": 10,
   "generateIndexPagination": true,
   "generateTagPages": true,

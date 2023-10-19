@@ -10,7 +10,6 @@
     <link rel="preload" href="{{ assets_prefix }}planet.json" as="fetch" type="application/json" crossorigin="anonymous">
     <link rel="preload" href="{{ assets_prefix }}rss.xml" as="fetch" type="application/rss+xml" crossorigin="anonymous">
     <title>{% block title %}{{ page_title|escape }}{% endblock %}</title>
-    <script type="text/javascript" src="{{ assets_prefix }}assets/utils.js"></script>
     <script>
       let userAgentRegex = /Planet\/\S*/;
       window.PLANET = {
