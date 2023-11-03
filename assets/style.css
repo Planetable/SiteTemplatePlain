@@ -47,6 +47,21 @@
         --breadcrumb-border-color: rgba(32, 32, 34, 0.7);
         --code-background-color: #2b2b2d;
     }
+
+    kbd {
+        color: #eeeeee;
+        text-shadow: 0 -1px 0 #000000;
+        border-color: #000;
+        background-color: #4d4c4c;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.5)), color-stop(80%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
+        background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
+        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
+        background-repeat: no-repeat;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=0);
+        box-shadow: 0px 2px 0 #000000, 0 3px 1px #999999, inset 0 1px 1px #aaaaaa, inset 0 -1px 3px #272727;
+    }
 }
 
 html {
@@ -62,7 +77,9 @@ body {
     font-family: "Helvetica Neue", "Arial", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
 
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
     color: var(--link-color);
     text-decoration: none;
     line-break: anywhere;
@@ -86,7 +103,10 @@ code {
     border-radius: 3px;
 }
 
-code, pre, samp, tt {
+code,
+pre,
+samp,
+tt {
     font-family: var(--monospace);
 }
 
@@ -96,10 +116,10 @@ pre {
     border-radius: 3px;
     padding: 10px;
     font-size: 0.9em;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.02),
-                0 2px 4px rgba(0,0,0,0.02),
-                0 4px 8px rgba(0,0,0,0.02),
-                0 8px 16px rgba(0,0,0,0.02);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02),
+        0 2px 4px rgba(0, 0, 0, 0.02),
+        0 4px 8px rgba(0, 0, 0, 0.02),
+        0 8px 16px rgba(0, 0, 0, 0.02);
 }
 
 pre {
@@ -171,7 +191,7 @@ hr {
     margin-right: auto;
 }
 
-.breadcrumb-inner > .chevron {
+.breadcrumb-inner>.chevron {
     display: inline-block;
     margin: 0 8px;
     color: var(--chevron-color);
@@ -179,7 +199,7 @@ hr {
     font-weight: 500;
 }
 
-.breadcrumb-inner > a {
+.breadcrumb-inner>a {
     line-break: auto;
 }
 
@@ -194,9 +214,7 @@ hr {
     border-radius: 16px;
     vertical-align: bottom;
     display: block;
-    filter: drop-shadow(
-        0px 1px 2px rgba(0, 0, 0, 0.1)
-    );
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1));
 }
 
 .main {
@@ -220,10 +238,10 @@ hr {
     width: 100%;
     padding: 0;
     border-collapse: collapse;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.02),
-                0 2px 4px rgba(0,0,0,0.02),
-                0 4px 8px rgba(0,0,0,0.02),
-                0 8px 16px rgba(0,0,0,0.02);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02),
+        0 2px 4px rgba(0, 0, 0, 0.02),
+        0 4px 8px rgba(0, 0, 0, 0.02),
+        0 8px 16px rgba(0, 0, 0, 0.02);
 }
 
 .content table tr {
@@ -318,8 +336,7 @@ hr {
     gap: 10px;
 }
 
-.item-hero-image {
-}
+.item-hero-image {}
 
 .item-hero-image img {
     max-height: 60px;
@@ -350,7 +367,8 @@ hr {
     display: inline-block;
 }
 
-.item-video-icon, .item-audio-icon {
+.item-video-icon,
+.item-audio-icon {
     width: 1em;
     height: 1em;
     filter: var(--icon-secondary-filter);
@@ -361,6 +379,35 @@ hr {
     height: 1em;
     vertical-align: bottom;
     filter: var(--icon-social-filter);
+}
+
+kbd {
+    font-size: 12px;
+    color: #444444;
+    font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    line-height: 1em;
+    text-shadow: 0 1px 0 #fff;
+    display: inline;
+    padding: .3em .55em;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #bbb;
+    background-color: #f7f7f7;
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a000000', endColorstr='#00000000', GradientType=0);
+    box-shadow: 0px 2px 0 #bbbbbb, 0 3px 1px #999999, 0 3px 0 #bbbbbb, inset 0 1px 1px #ffffff, inset 0 -1px 3px #cccccc;
 }
 
 .video-container {
@@ -409,9 +456,7 @@ img.avatar {
     width: 72px;
     height: 72px;
     border-radius: 72px;
-    filter: drop-shadow(
-        0px 2px 5px rgba(0, 0, 0, 0.1)
-    );
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.1));
     padding: 10px;
 }
 
@@ -448,7 +493,8 @@ img.avatar {
     flex-wrap: wrap;
 }
 
-.nav-current:link, .nav-current:visited {
+.nav-current:link,
+.nav-current:visited {
     background-color: var(--nav-current-background-color);
     color: var(--nav-current-foreground-color);
     border-radius: 2em;
@@ -464,7 +510,8 @@ img.avatar {
     background-color: var(--nav-current-background-color);
 }
 
-.nav-item:link, .nav-item:visited {
+.nav-item:link,
+.nav-item:visited {
     background-color: var(--nav-item-background-color);
     color: var(--nav-item-foreground-color);
     border-radius: 2em;
@@ -480,7 +527,18 @@ img.avatar {
     text-decoration: none;
 }
 
-p, h1, h2, h3, h4, h5, h6, .date, ul, ol, pre, hr {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.date,
+ul,
+ol,
+pre,
+hr {
     max-width: var(--content-max-width);
     margin-left: auto;
     margin-right: auto;
@@ -741,7 +799,8 @@ footer {
         padding: 0px 20px 0px 20px;
     }
 
-    .tag-cloud, .archive-list {
+    .tag-cloud,
+    .archive-list {
         column-count: 2;
     }
 }
