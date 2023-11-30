@@ -4,6 +4,10 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     if (!window.PLANET.visitedFromPlanetClient) {
+      {% if article.externalLink.count > 0 %}
+      window.location.href = "{{ article.externalLink }}";
+      {% endif %}
+
       if(document.getElementById('audio-container')){
         document.querySelector('.audio-container').style.display = 'block';
       }
