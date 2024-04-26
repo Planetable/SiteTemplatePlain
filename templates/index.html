@@ -30,7 +30,7 @@
     {% endif %}
     <div class="item-main">
       {% if article.title.count > 0 %}<div class="item-title"><a href=".{{ article.link }}">{{ article.title|escape }}</a></div>{% endif %}
-      {% if article.contentRendered.count > 0 %}<div class="content">{{ article.contentRendered }}</div>{% endif %}
+      {% if article.title.count == 0 and article.contentRendered.count > 0 %}<div>{{ article.contentRendered }}</div>{% endif %}
       <div class="item-info">
         <div class="item-date">{{ article.created|ymd }}</div>
         {% if article.hasVideo %}<img src="{{ assets_prefix }}assets/video.svg" width="1em" class="item-video-icon" alt="Video">{% endif %}
