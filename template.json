@@ -3,10 +3,10 @@
   "description": "A plain template for Planet",
   "author": "Planetable Team",
   "authorWebsite": "https://planetable.xyz",
-  "version": "1.7.11",
+  "version": "1.7.12",
   "idealItemsPerPage": 10,
   "generateIndexPagination": true,
   "generateTagPages": true,
   "generateArchive": true,
-  "buildNumber": 121
+  "buildNumber": 122
 }
