@@ -37,7 +37,7 @@
 {% include 'modules/top.html' %}
 {% include 'modules/nav.html' %}
 {% endif %}
-<h1>{{ article.title|escape }}</h1>
+{% if article.title.count > 0 %}<h1>{{ article.title|escape }}</h1>{% endif %}
 <div class="date">{{ article.created|formatDate }}</div>
 <div class="content">
   {% if article.hasVideo %}
