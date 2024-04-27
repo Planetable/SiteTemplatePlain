@@ -1,9 +1,9 @@
 <div class="pages-container">
   {% if previous_page %}
-  <a href="./{{ previous_page }}" class="nav-current">Prev</a>
+  <span class="chevron">‹</span>&nbsp;&nbsp;<a href="./{{ previous_page }}">Prev</a>
   {% endif %}
   <div class="pages-info">{% if total_pages > 1 %}Page {{ current_page }} of {{ total_pages }}{% else %}&nbsp;{% endif %}</div>
   {% if next_page %}
-  <a href="./{{ next_page }}" class="nav-current">Next</a>
+  <a href="./{{ next_page }}">Next</a>&nbsp;&nbsp;<span class="chevron">›</span>
   {% endif %}
 </div>
