@@ -354,6 +354,10 @@ hr {
     text-align: left;
 }
 
+.item-title>a {
+    line-break: strict !important;
+}
+
 .item-info {
     display: flex;
     gap: 10px;
