@@ -31,6 +31,14 @@
     --kbd-background-image: linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
     --kbd-background-repeat: repeat-x;
     --kbd-box-shadow: 0px 1px 0 #bbbbbb, 0 2px 1px #999999, 0 2px 0 #bbbbbb, inset 0 1px 1px #ffffff, inset 0 -1px 2px #cccccc;
+    --shadows: 0 1px 2px rgba(0, 0, 0, 0.02),
+    0 2px 4px rgba(0, 0, 0, 0.02),
+    0 4px 8px rgba(0, 0, 0, 0.02),
+    0 8px 16px rgba(0, 0, 0, 0.02);
+    --small-shadows: 0 1px 1px rgba(0, 0, 0, 0.02),
+    0 2px 3px rgba(0, 0, 0, 0.02),
+    0 3px 5px rgba(0, 0, 0, 0.02),
+    0 5px 8px rgba(0, 0, 0, 0.02);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -604,7 +612,9 @@ figure {
 }
 
 figure>img:first-child {
-    margin: 40px 0px 20px 0px;
+    margin: 30px 0px 20px 0px;
+    border-radius: 4px;
+    box-shadow: var(--shadows);
 }
 
 figcaption {
