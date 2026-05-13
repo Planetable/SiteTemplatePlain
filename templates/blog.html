@@ -29,6 +29,8 @@
       item.id = "todo-item-" + i;
       i++;
     });
+
+    {% include 'modules/video.js' %}
   });
 </script>
 {% endblock %}
@@ -42,7 +44,7 @@
 <div class="content">
   {% if article.hasVideo %}
   <div class="video-container">
-    <video class="video" controls playsinline>
+    <video class="video" controls playsinline preload="auto" poster="_videoThumbnail.png">
       <source src="{{ article.videoFilename }}">
     </video>
   </div>
